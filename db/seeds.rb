@@ -1,5 +1,5 @@
+puts 'Cleaning the database 🧼'
 Article.destroy_all
-puts 'clearing database'
 
 10.times do
   article = Article.new(

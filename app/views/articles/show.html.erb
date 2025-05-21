@@ -1,16 +1,20 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
+      <div>
       <h2><%= @article.title %></h2>
-      <hr>
-      <p><%= @article.content %></p>
-
-      <%= link_to "Go back", articles_path %>
       <%= link_to "Edit", edit_article_path(@article) %>
       <%= link_to "Delete",
         article_path(@article),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
       %>
+      </div>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo eu libero at euismod. Vestibulum non odio vulputate elit volutpat blandit. Maecenas.</p>
+      <h3>Content</h3>
+      <p><%= @article.content %></p>
+
+      <%= link_to "Go back", articles_path %>
     </div>
   </div>
 </div>
